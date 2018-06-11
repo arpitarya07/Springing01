@@ -8,6 +8,6 @@
 		<property name="message" value="Hi from Arpit"></property>
 	</bean>
 	<bean id="printer" class="com.springing.Springing01.service.MessagePrinterService">
-		<property name="messageService" ref="basicMessageOfTheDay"></property>
+		<constructor-arg ref="basicMessageOfTheDay"></constructor-arg>
 	</bean>
 </beans>
