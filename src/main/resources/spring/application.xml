@@ -4,7 +4,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
 	
-	<bean id="basicMessageOfTheDay" class="com.springing.Springing01.service.BasicMessageOfTheDayImpl" />
+	<bean id="basicMessageOfTheDay" class="com.springing.Springing01.service.BasicMessageOfTheDayImpl">
+		<property name="message" value="Hi from Arpit"></property>
+	</bean>
 	<bean id="printer" class="com.springing.Springing01.service.MessagePrinterService">
 		<property name="messageService" ref="basicMessageOfTheDay"></property>
 	</bean>
