@@ -32,6 +32,30 @@
 				<ref bean="7"></ref>
 			</array>
 		</property>
+		
+		<property name="messagesList">
+			<list>
+				<value>"Sunday morning message!"</value>
+				<value>"Monday morning message!"</value>
+				<value>"Tuesday morning message!"</value>
+				<value>"Wednesday morning message!"</value>
+				<value>"Thursday morning message!"</value>
+				<value>"Friday morning message!"</value>
+				<value>"Saturday morning message!"</value>
+			</list>
+		</property>
+		
+		<property name="messagesValueList">
+			<list>
+				<ref bean="1"></ref>
+				<ref bean="2"></ref>
+				<ref bean="3"></ref>
+				<ref bean="4"></ref>
+				<ref bean="5"></ref>
+				<ref bean="6"></ref>
+				<ref bean="7"></ref>
+			</list>
+		</property>
 	</bean>
 	
 	<!--  Message Value Objects -->
