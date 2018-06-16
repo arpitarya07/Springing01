@@ -56,6 +56,30 @@
 				<ref bean="7"></ref>
 			</list>
 		</property>
+		
+		<property name="messagesMap">
+			<map>
+				<entry key="1" value="Sunday morning message!"></entry>
+				<entry key="2" value="Monday morning message!"></entry>
+				<entry key="3" value="Tuesday morning message!"></entry>
+				<entry key="4" value="Wednesday morning message!"></entry>
+				<entry key="5" value="Thursday morning message!"></entry>
+				<entry key="6" value="Friday morning message!"></entry>
+				<entry key="7" value="Saturday morning message!"></entry>
+			</map>
+		</property>
+		
+		<property name="messagesValueMap">
+			<map>
+				<entry key="1" value-ref="1"></entry>
+				<entry key="2" value-ref="2"></entry>
+				<entry key="3" value-ref="3"></entry>
+				<entry key="4" value-ref="4"></entry>
+				<entry key="5" value-ref="5"></entry>
+				<entry key="6" value-ref="6"></entry>
+				<entry key="7" value-ref="7"></entry>
+			</map>
+		</property>
 	</bean>
 	
 	<!--  Message Value Objects -->

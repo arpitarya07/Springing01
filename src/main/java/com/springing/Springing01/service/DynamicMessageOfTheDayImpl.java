@@ -43,7 +43,7 @@ public class DynamicMessageOfTheDayImpl implements MessageOfTheDayService {
 	}
 
 	public void setMessagesList(List<String> messagesList) {
-		messagesList = messagesList;
+		this.messagesList = messagesList;
 	}
 
 	public List<MessageValue> getMessagesValueList() {
@@ -66,8 +66,8 @@ public class DynamicMessageOfTheDayImpl implements MessageOfTheDayService {
 		return messagesValueMap;
 	}
 
-	public void setMessagseValueMap(Map<Integer, MessageValue> messagseValueMap) {
-		messagseValueMap = messagseValueMap;
+	public void setMessagesValueMap(Map<Integer, MessageValue> messagesValueMap) {
+		this.messagesValueMap = messagesValueMap;
 	}
 
 	public DynamicMessageOfTheDayImpl() {
@@ -109,7 +109,7 @@ public class DynamicMessageOfTheDayImpl implements MessageOfTheDayService {
 		}
 		
 		if(!messagesValueMap.isEmpty()) {
-			message = "From Map:" + messagesValueMap.get(day);
+			message = "From Map:" + messagesValueMap.get(day).getMessage();
 		}		
 		
 		return message;
