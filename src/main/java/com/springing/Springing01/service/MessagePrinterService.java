@@ -4,7 +4,7 @@ public class MessagePrinterService {
 
 	private MessageOfTheDayService service;
 	
-	public MessagePrinterService(final MessageOfTheDayService service) {
+	public MessagePrinterService(String msg, String args2, final MessageOfTheDayService service) {
 		this.service = service;
 	}
 

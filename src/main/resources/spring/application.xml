@@ -7,7 +7,24 @@
 	<bean id="basicMessageOfTheDay" class="com.springing.Springing01.service.BasicMessageOfTheDayImpl">
 		<property name="message" value="Hi from Arpit"></property>
 	</bean>
+	
+	<bean id="dynamicMessageOfTheDay" class="com.springing.Springing01.service.DynamicMessageOfTheDayImpl">
+		<property name="messagesArray">
+			<array>
+				<value>"Sunday morning message!"</value>
+				<value>"Monday morning message!"</value>
+				<value>"Tuesday morning message!"</value>
+				<value>"Wednesday morning message!"</value>
+				<value>"Thursday morning message!"</value>
+				<value>"Friday morning message!"</value>
+				<value>"Saturday morning message!"</value>
+			</array>
+		</property>
+	</bean>
+	
 	<bean id="printer" class="com.springing.Springing01.service.MessagePrinterService">
-		<constructor-arg ref="basicMessageOfTheDay"></constructor-arg>
+		<constructor-arg index="0" value="My Printer Service"></constructor-arg>
+		<constructor-arg index="1" value=">>"></constructor-arg>
+		<constructor-arg index="2" ref="dynamicMessageOfTheDay"></constructor-arg>
 	</bean>
 </beans>
