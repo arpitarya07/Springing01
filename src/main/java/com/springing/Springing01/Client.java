@@ -25,6 +25,5 @@ public class Client {
 		catch (final Exception ex) {
 			ex.printStackTrace();
 		}
-
 	}
 }
