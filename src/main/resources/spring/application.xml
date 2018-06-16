@@ -9,6 +9,18 @@
 	</bean>
 	
 	<bean id="dynamicMessageOfTheDay" class="com.springing.Springing01.service.DynamicMessageOfTheDayImpl">
+		<constructor-arg>
+			<array>
+				<value>"Sunday morning message!"</value>
+				<value>"Monday morning message!"</value>
+				<value>"Tuesday morning message!"</value>
+				<value>"Wednesday morning message!"</value>
+				<value>"Thursday morning message!"</value>
+				<value>"Friday morning message!"</value>
+				<value>"Saturday morning message!"</value>
+			</array>
+		</constructor-arg>
+		
 		<property name="messagesArray">
 			<array>
 				<value>"Sunday morning message!"</value>
