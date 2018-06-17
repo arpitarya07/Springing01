@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
+	<bean id="printer" class="com.springing.Springing01.service.MessagePrinterService" p:messageService-ref="basicMessageOfTheDay" />
 	
-	<bean id="basicMessageOfTheDay" class="com.springing.Springing01.service.BasicMessageOfTheDayImpl" scope="prototype">
-		<property name="message" value="Hi from Arpit"></property>
-	</bean>
+	<bean id="basicMessageOfTheDay" class="com.springing.Springing01.service.BasicMessageOfTheDayImpl" p:message="Hi from Arpit" />
 	
 	<bean id="dynamicMessageOfTheDay" class="com.springing.Springing01.service.DynamicMessageOfTheDayImpl">
 		<constructor-arg>
@@ -123,9 +123,4 @@
 		<constructor-arg value="Saturday morning message!" />
 	</bean>
 	
-	<bean id="printer" class="com.springing.Springing01.service.MessagePrinterService">
-		<constructor-arg index="0" value="My Printer Service"></constructor-arg>
-		<constructor-arg index="1" value=">>"></constructor-arg>
-		<constructor-arg index="2" ref="dynamicMessageOfTheDay"></constructor-arg>
-	</bean>
 </beans>

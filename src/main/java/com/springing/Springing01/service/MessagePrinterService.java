@@ -4,6 +4,10 @@ public class MessagePrinterService {
 
 	private MessageOfTheDayService service;
 	
+	public MessagePrinterService() {
+		
+	}
+	
 	public MessagePrinterService(String msg, String args2, final MessageOfTheDayService service) {
 		this.service = service;
 	}
@@ -12,8 +16,8 @@ public class MessagePrinterService {
         System.out.println(service.getMessage());
     }
         
-/*    public void setMessageService(final MessageOfTheDayService service){
+    public void setMessageService(final MessageOfTheDayService service){
     	this.service = service;
-    }*/
+    }
 
 }
