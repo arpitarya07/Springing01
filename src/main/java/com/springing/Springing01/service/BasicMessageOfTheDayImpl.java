@@ -3,7 +3,8 @@ package com.springing.Springing01.service;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class BasicMessageOfTheDayImpl implements MessageOfTheDayService, InitializingBean, DisposableBean {
+public class BasicMessageOfTheDayImpl implements MessageOfTheDayService //, InitializingBean, DisposableBean 
+{
 	
 	private String message;
 	
@@ -23,13 +24,13 @@ public class BasicMessageOfTheDayImpl implements MessageOfTheDayService, Initial
 		this.message = message;
 	}
 
-	@Override
+	//@Override
 	public void destroy() throws Exception {
 		System.out.println("destroy called for: " + BasicMessageOfTheDayImpl.class.getName());	
 		
 	}
 
-	@Override
+	//@Override
 	public void afterPropertiesSet() throws Exception {
 		System.out.println("afterPropertiesSet called for: " + BasicMessageOfTheDayImpl.class.getName());
 		

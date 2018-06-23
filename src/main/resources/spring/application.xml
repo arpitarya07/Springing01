@@ -5,9 +5,13 @@
 	xmlns:c="http://www.springframework.org/schema/c"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
+	<bean class="com.springing.Springing01.service.processors.MessageCheckerPostProcessor" />
+	<bean class="com.springing.Springing01.service.processors.PrinterCheckerPostProcessor" />
+
 	<bean id="printer" class="com.springing.Springing01.service.MessagePrinterService" c:service-ref="basicMessageOfTheDay" />
 	
-	<bean id="basicMessageOfTheDay" class="com.springing.Springing01.service.BasicMessageOfTheDayImpl" p:message="Hi from Arpit" />
+	<bean id="basicMessageOfTheDay" class="com.springing.Springing01.service.BasicMessageOfTheDayImpl" 
+	p:message="Hi from Arpit" init-method="init" destroy-method="destroy" />
 	
 	<bean id="dynamicMessageOfTheDay" class="com.springing.Springing01.service.DynamicMessageOfTheDayImpl">
 		<constructor-arg>
